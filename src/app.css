@@ -1,7 +1,13 @@
 body {
-  background: #000;
+  background: var(--bg);
+}
+
+:root {
+  --primary: #8D86C9;
+  --bg: #242038;
 }
 
 * {
-  color: #fff;
+  font-family: Anonymous Pro, monospace;
+  color: var(--primary);
 }

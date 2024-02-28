@@ -1,5 +1,6 @@
 <script>
   import Board from "./lib/Board.svelte";
+  import Title from "./lib/Title.svelte";
   let columnsData = [
     {
       id: "c1",
@@ -29,6 +30,7 @@
   }
 </script>
 
+<Title />
 <Board columns={columnsData} onFinalUpdate={handleBoardUpdated} />
 
 <style>

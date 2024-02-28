@@ -27,7 +27,7 @@
     >
         {#each items as item (item.id)}
             <div class="card" animate:flip={{ duration: flipDurationMs }}>
-                {item.name}
+                <p contenteditable>{item.name}</p>
             </div>
         {/each}
     </div>
@@ -43,22 +43,29 @@
     .column-content {
         height: calc(100% - 2.5em);
         /* Notice that the scroll container needs to be the dndzone if you want dragging near the edge to trigger scrolling */
-        overflow-y: scroll;
-        min-height: 3em;
+        min-height: 1em;
+        padding: 1em;
+        padding-top: 0.2em;
     }
     .column-title {
-        height: 2.5em;
         font-weight: bold;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        padding-left: 1em;
     }
     .card {
+        padding: 0.5em;
         width: 100%;
         margin: 0.4em 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 1px solid #333333;
+        border-radius: 0.5em;
+        background-color: var(--primary);
+    }
+
+    p {
+        width: fit-content;
+        outline: none;
+        color: var(--bg);
+    }
+
+    [contenteditable] {
+        -webkit-user-select: text;
     }
 </style>

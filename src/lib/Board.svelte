@@ -41,12 +41,8 @@
     .board {
         height: 90vh;
         width: 100%;
-        padding: 0.5em;
     }
     .column {
         width: 100%;
-        padding: 0.5em;
-        margin: 0.5em;
-        border: 1px solid #333333;
     }
 </style>
